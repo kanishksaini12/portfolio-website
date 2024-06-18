@@ -6,7 +6,7 @@ import { TracingBeam } from "./ui/tracing-beam";
 
 function App() {
   return (
-    <div className="bg-black color text-white w-full h-full">
+    <div className="bg-black color text-white w-full h-full font-mont">
       <Layout />
     </div>
   );
