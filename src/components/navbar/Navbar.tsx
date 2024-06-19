@@ -4,10 +4,15 @@ import { useState } from "react";
 import { Menu, MenuItem } from "../../ui/navbar-menu";
 import { cn } from "../../utils/cn";
 import "./Navbar.css";
+import pdf from "../../assets/resume.pdf";
 
 function Navbar({ active, setActive }: any) {
   function setActiveMenu(event: any) {
-    setActive(event);
+    if (event.toLowerCase() === "resume") {
+      window?.open(pdf, "_blank")?.focus();
+    } else {
+      setActive(event);
+    }
   }
 
   return (
