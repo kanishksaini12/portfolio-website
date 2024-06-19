@@ -9,22 +9,22 @@ function Welcome() {
       backgroundColor="black"
       rangeY={500}
       particleCount={500}
-      baseHue={0}
+      baseHue={180}
       className="flex items-center flex-col justify-center px-2 md:px-10 w-full h-full"
     >
       <div className="welcome-container h-[100vh]">
-        <div className="w-[50em]">
+        <div className="w-[40em]">
           <div className="text-5xl">Hi, there</div>
           <div>
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: "My name is",
+                  text: "I am",
                   className: "text-white text-6xl",
                 },
                 {
                   text: "Kanishk",
-                  className: "text-blue-500 dark:text-blue-500 text-8xl",
+                  className: "text-blue-500 text-8xl",
                 },
               ]}
             />

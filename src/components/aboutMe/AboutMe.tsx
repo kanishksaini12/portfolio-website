@@ -35,11 +35,16 @@ function AboutMe() {
   }, []);
 
   return (
-    <div ref={targetRef} className="w-full flex justify-center items-center">
+    <div
+      ref={targetRef}
+      className="w-full flex justify-center items-center h-full"
+    >
       {isVisible ? (
         <div className="flex flex-row justify-end w-full">
-          <div className="w-[30em] flex-wrap mt-[8em]">
-            <div className="text-6xl mb-[1em] font-bold">About Me</div>
+          <div className="w-[30em] flex-wrap mt-[12em]">
+            <div className="text-6xl mb-[1em] font-bold text-blue-500">
+              About Me
+            </div>
             <div>
               <TextGenerateEffect
                 words={about}
@@ -52,7 +57,7 @@ function AboutMe() {
               />
             </div>
           </div>
-          <div className="w-[50em] mt-[-4em]">
+          <div className="w-[50em]">
             <LampContainer>
               <motion.h1
                 initial={{ opacity: 0.5, y: 100 }}
@@ -62,11 +67,15 @@ function AboutMe() {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="mt-8 bg-gradient-to-br from-gray-600 to-black bg-clip-text text-center"
+                className="mt-[-2em] bg-gradient-to-br from-gray-600 to-black bg-clip-text text-center"
               >
-                Angular React <br /> JavaScript TypeScript <br /> HTML CSS
-                Tailwaind CSS NodeJs
-                <br /> Redux Ngrx E-charts RxJs
+                <span className="text-xl">
+                  Angular React <br /> JavaScript TypeScript <br /> HTML CSS
+                  Tailwaind CSS NodeJs
+                  <br /> Redux Ngrx E-charts RxJs
+                  <br />
+                  ... and many more
+                </span>
               </motion.h1>
             </LampContainer>
           </div>
