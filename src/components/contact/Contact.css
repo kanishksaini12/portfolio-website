@@ -1,0 +1,13 @@
+.contact-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icon:hover {
+  width: 3.5em;
+  height: 3.5em;
+  cursor: pointer;
+}
