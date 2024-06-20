@@ -4,6 +4,7 @@ import AboutMe from "../aboutMe/AboutMe";
 import Navbar from "../navbar/Navbar";
 import Welcome from "../welcome/Welcome";
 import "./Layout.css";
+import Contact from "../contact/Contact";
 
 function Layout() {
   const [active, setActive] = useState<string | null>("Home");
@@ -32,6 +33,9 @@ function Layout() {
         </div>
         <div id="about" className="section">
           <AboutMe />
+        </div>
+        <div id="contact" className="section">
+          <Contact />
         </div>
       </TracingBeam>
     </div>
