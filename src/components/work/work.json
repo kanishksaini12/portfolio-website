@@ -1,0 +1,32 @@
+{
+  "Work": [
+    {
+      "image": "dashboard",
+      "title": "Data Visualization",
+      "desc": "Developed an extensive suite of over 50 customizable widgets and dashboard projects, revolutionizing productivity and analytics. It enable seamless data integration, trend visualization, and personalized layouts, tailored to diverse needs. Versatile and highly efficient, they enhance any workflow",
+      "stack": ["Angular", "React", "Typescript", "NgRx Store", "E-charts"]
+    },
+
+    {
+      "image": "esg",
+      "title": "ESG Repoting",
+      "desc": "Created dynamic forms for ESG reporting across Scope 1, 2, and 3, streamlining data input and analysis. These forms feature customizable dashboards that offer clear, actionable insights. Versatile and user-friendly, they improve the efficiency and accuracy of ESG compliance and reporting.",
+      "stack": ["Angular", "Formly", "Typescript"]
+    },
+
+    {
+      "image": "forms",
+      "title": "Internal Tools",
+      "desc": "Developed internal tools like customizable grid and form components, empowering streamlined data management and user interaction. These tools offer flexibility and efficiency, enhancing operational workflows with tailored solutions for diverse organizational needs.",
+      "stack": ["Angular", "Typescript", "Ag-grid", "Formly"]
+    }
+  ],
+  "Personal": [
+    {
+      "image": "weather",
+      "title": "Weather Forecast",
+      "desc": "Experience real-time weather updates with our innovative app. Track temperature, humidity, and forecasts seamlessly tailored to your location. Stay ahead with reliable insights, ensuring you're prepared for any weather conditions.",
+      "stack": ["React", "Typescript", "Tailwind CSS"]
+    }
+  ]
+}
