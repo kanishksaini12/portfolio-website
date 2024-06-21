@@ -20,6 +20,7 @@ function Navbar({ active, setActive }: any) {
       <Menu setActive={setActiveMenu}>
         <MenuItem setActive={setActiveMenu} active={active} item="Home" />
         <MenuItem setActive={setActiveMenu} active={active} item="About" />
+        <MenuItem setActive={setActiveMenu} active={active} item="Work" />
         <MenuItem setActive={setActiveMenu} active={active} item="Contact" />
         <MenuItem setActive={setActiveMenu} active={active} item="Resume" />
       </Menu>

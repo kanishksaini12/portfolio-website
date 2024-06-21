@@ -5,6 +5,7 @@ import Navbar from "../navbar/Navbar";
 import Welcome from "../welcome/Welcome";
 import "./Layout.css";
 import Contact from "../contact/Contact";
+import Work from "../work/Work";
 
 function Layout() {
   const [active, setActive] = useState<string | null>("Home");
@@ -15,7 +16,7 @@ function Layout() {
       const id = document.getElementById(a as string);
       id?.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
         inline: "nearest",
       });
     }
@@ -33,6 +34,9 @@ function Layout() {
         </div>
         <div id="about" className="section">
           <AboutMe />
+        </div>
+        <div id="work" className="w-full h-full">
+          <Work />
         </div>
         <div id="contact" className="section">
           <Contact />
