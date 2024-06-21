@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../utils/cn";
 
@@ -11,19 +11,48 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+
   let wordsArray = words.split(" ");
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
+    if (isInView) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+        },
+        {
+          duration: 2,
+          delay: stagger(0.2),
+        }
+      );
+    }
+  }, [scope.current, isInView]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
       },
       {
-        duration: 2,
-        delay: stagger(0.2),
+        root: null, // viewport
+        rootMargin: "0px", // no margin
+        threshold: 0.5, // 50% of target visible
       }
     );
-  }, [scope.current]);
+
+    if (ref?.current) {
+      observer.observe(ref.current);
+    }
+
+    // Clean up the observer
+    return () => {
+      if (ref?.current) {
+        observer.unobserve(ref?.current);
+      }
+    };
+  }, []);
 
   const renderWords = () => {
     return (
@@ -40,7 +69,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div ref={ref} className={cn("font-bold", className)}>
       <div className="mt-4">
         <div className=" text-white leading-snug tracking-wide">
           {renderWords()}

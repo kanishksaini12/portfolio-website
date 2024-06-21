@@ -1,6 +1,9 @@
-import { TypewriterEffectSmooth } from "../../ui/typewriter-effect";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "../../ui/typewriter-effect";
 import "./Welcome.css";
-import myself from "../../assets/images/myself.png";
+import myself from "../../assets/images/myself_2.png";
 import { Vortex } from "../../ui/vortex";
 
 function Welcome() {
@@ -34,8 +37,8 @@ function Welcome() {
             I craft user experience with beautiful blend of code and cretivity
           </div>
         </div>
-        <div className="welcome-image">
-          <img src={myself} style={{ width: "15em" }} />
+        <div>
+          <img src={myself} className="w-[35em]" />
         </div>
       </div>
     </Vortex>
