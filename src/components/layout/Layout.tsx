@@ -3,7 +3,6 @@ import { TracingBeam } from "../../ui/tracing-beam";
 import AboutMe from "../aboutMe/AboutMe";
 import Navbar from "../navbar/Navbar";
 import Welcome from "../welcome/Welcome";
-import "./Layout.css";
 import Contact from "../contact/Contact";
 import Work from "../work/Work";
 
@@ -24,21 +23,19 @@ function Layout() {
   }, [active]);
 
   return (
-    <div>
-      <div>
-        <Navbar active={active} setActive={setActive} />
-      </div>
-      <TracingBeam className="px-6 ml-[5em]">
-        <div id="home" className="section overflow-x-hidden">
+    <div className="flex flex-col min-h-screen">
+      <Navbar active={active} setActive={setActive} />
+      <TracingBeam className="px-6 md:ml-20">
+        <div id="home" className="section w-full h-screen overflow-x-hidden">
           <Welcome />
         </div>
-        <div id="about" className="section">
+        <div id="about" className="section w-full h-screen">
           <AboutMe />
         </div>
-        <div id="work" className="w-full h-full">
+        <div id="work" className="section w-full h-full">
           <Work />
         </div>
-        <div id="contact" className="section">
+        <div id="contact" className="section w-full h-screen">
           <Contact />
         </div>
       </TracingBeam>
