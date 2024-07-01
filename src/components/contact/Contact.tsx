@@ -18,9 +18,9 @@ function Contact() {
   }
 
   return (
-    <div className="w-full h-full overflow-hidden relative flex flex-col items-center text-center px-4 md:px-20">
+    <div className="w-full h-full overflow-hidden relative flex flex-col items-center text-center px-4 md:px-20 pt-[2em]">
       <div className="flex mt-40 flex-col items-center w-full max-w-4xl text-center">
-        <div className="text-4xl md:text-6xl font-bold text-blue-500">
+        <div className="text-4xl md:text-6xl font-bold text-[#83C3B3]">
           Get in Touch
         </div>
         <div className="mt-8 md:mt-20 text-base md:text-xl">

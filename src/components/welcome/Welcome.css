@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-evenly !important;
   width: 100%;
+  background: linear-gradient(to right, black 50%, #1c3d35 100%);
 }
 
 .welcome-container .block {

@@ -9,19 +9,9 @@ const AboutMe: React.FC = () => {
   const secondary = `With a degree in Mathematics and Computer Science, I offer the perfect blend of analytical precision and technical expertise.`;
 
   return (
-    <div className="w-full flex justify-center items-center h-full px-4 md:px-10">
-      <div className="flex flex-col items-center md:flex-row justify-end w-full mt-24 md:mt-0">
-        <div className="flex items-center md:w-2/5 h-full flex-wrap mt-12 md:mt-0 text-center md:text-left">
-          <div className="text-6xl mb-[5rem] font-bold text-blue-500">
-            About Me
-          </div>
-          <div className="text-white text-xl">
-            <TextGenerateEffect words={about} />
-            <br />
-            <TextGenerateEffect words={secondary} />
-          </div>
-        </div>
-        <div className="md:w-3/5 mt-12 md:mt-0 flex justify-center">
+    <div className="w-full flex justify-center items-center h-full pl-[5em]">
+      <div className="flex flex-row items-center md:flex-row w-full mt-24 md:mt-0">
+        <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
           <LampContainer className="w-full">
             <motion.h1
               initial={{ opacity: 0.5, y: 100 }}
@@ -38,6 +28,16 @@ const AboutMe: React.FC = () => {
               </span>
             </motion.h1>
           </LampContainer>
+        </div>
+        <div className="flex items-center md:w-2/5 h-full flex-wrap mt-12 md:mt-0 text-center md:text-left pl-[2em]">
+          <div className="text-6xl mb-[5rem] font-bold text-[#83C3B3]">
+            About Me
+          </div>
+          <div className="text-white text-xl">
+            <TextGenerateEffect words={about} />
+            <br />
+            <TextGenerateEffect words={secondary} />
+          </div>
         </div>
       </div>
     </div>

@@ -25,17 +25,17 @@ function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar active={active} setActive={setActive} />
-      <TracingBeam className="px-6 md:ml-20">
-        <div id="home" className="section w-full h-screen overflow-x-hidden">
+      <TracingBeam className="">
+        <div id="home" className="w-full h-screen overflow-x-hidden">
           <Welcome />
         </div>
-        <div id="about" className="section w-full h-screen">
+        <div id="about" className="w-full h-screen">
           <AboutMe />
         </div>
-        <div id="work" className="section w-full h-full">
+        <div id="work" className="w-full h-full">
           <Work />
         </div>
-        <div id="contact" className="section w-full h-screen">
+        <div id="contact" className="w-full h-screen">
           <Contact />
         </div>
       </TracingBeam>

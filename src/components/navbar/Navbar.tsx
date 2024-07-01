@@ -16,11 +16,7 @@ function Navbar({ active, setActive }: any) {
   }
 
   return (
-    <div
-      className={cn(
-        "fixed top-8 inset-x-0 max-w-[25em] mx-auto z-50 left-[4em]"
-      )}
-    >
+    <div className={cn("fixed top-8 inset-x-0 max-w-[25em] mx-auto z-50")}>
       <Menu setActive={setActiveMenu}>
         <MenuItem setActive={setActiveMenu} active={active} item="Home" />
         <MenuItem setActive={setActiveMenu} active={active} item="About" />
